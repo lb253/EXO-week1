@@ -2,7 +2,7 @@ ybis<- read.csv.sql("household_power_consumption.txt", sep = ";", header = TRUE,
 
  
 
-ybis$"1"<- cbind(ybis$Date, ybis$Time, sep ="-")
+ybis$"1"<- paste(ybis$Date, ybis$Time, sep ="-")
 ybis$"1"<- strptime(y$"1", "%d/%m/%Y-%H:%M:%S")
  
   plot(ybis$"1", ybis$Global_active_power, type = "n", ylab= "Energy sub metering", xlab= "")
