@@ -3,7 +3,7 @@ copy<- read.csv.sql("household_power_consumption.txt", sep = ";", header = TRUE,
 
 
 
-copy$X1<- cbind(copy$Date, copy$Time, sep ="-")
+copy$X1<- paste(copy$Date, copy$Time, sep ="-")
 copy$X1<- strptime(copy$X1, "%d/%m/%Y-%H:%M:%S")
 
 #install 2x2 canvas
