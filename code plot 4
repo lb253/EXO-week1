@@ -1,6 +1,11 @@
 #extrait filtered datas for days concerned
 copy<- read.csv.sql("household_power_consumption.txt", sep = ";", header = TRUE, sql = "select * from file where Date in ('2/1/2007','2/2/2007')")
 
+
+
+copy$X1<- cbind(copy$Date, copy$Time, sep ="-")
+copy$X1<- strptime(copy$X1, "%d/%m/%Y-%H:%M:%S")
+
 #install 2x2 canvas
 par(mfrow = c(2,2))
 
