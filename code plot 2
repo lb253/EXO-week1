@@ -1,0 +1,2 @@
+plot(ybis$"1", ybis$Global_active_power, type = "n", ylab= "Global_Active_Power(kilowatts)", xlab= "")
+lines(ybis$"1",ybis$Global_active_power, type = "l")
