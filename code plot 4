@@ -1,0 +1,20 @@
+par(mfrow = c(2,2))
+
+
+#code plot 1
+plot(copy$X1, copy$Global_active_power, type = "n", ylab= "Global_Active_Power(kilowatts)", xlab= "")
+ines(copy$X1,copy$Global_active_power, type = "l")
+
+#code plot 2
+plot(copy$X1, copy$Voltage, xlab = "datetime", ylab = "Voltage", type = "n")
+lines(copy$X1, copy$Voltage, type = "l")
+
+#code plot 3
+ plot(copy$X1, copy$Global_active_power, type = "n", ylab= "Energy sub metering", xlab= "")
+lines(copy$X1, ybis$Sub_metering_1, type = "l")
+lines(copy$X1, ybis$Sub_metering_2, type = "l", col ="red")
+ lines(copy$X1, ybis$Sub_metering_3, type = "l", col ="blue")
+legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black", "red", "blue"), lty = 1, cex = 0.1)
+
+#code plot 4
+plot(copy$X1, copy$Global_reactive_power, type = "h", ylab = "Global reactive power", xlab ="datetime")
