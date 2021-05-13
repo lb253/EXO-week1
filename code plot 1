@@ -1,0 +1,5 @@
+# code plot 1
+>w<- read.csv.sql("household_power_consumption.txt", sep = ";", header = TRUE, sql = "select * from file where Date in ('2/1/2007','2/2/2007')")
+  hist(w$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", main ="Global Active Power" )
+> dev.copy(png, file = "plot1.png")
+> dev.off()
