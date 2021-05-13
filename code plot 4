@@ -1,3 +1,7 @@
+#extrait filtered datas for days concerned
+copy<- read.csv.sql("household_power_consumption.txt", sep = ";", header = TRUE, sql = "select * from file where Date in ('2/1/2007','2/2/2007')")
+
+#install 2x2 canvas
 par(mfrow = c(2,2))
 
 
